@@ -50,7 +50,7 @@ public class UserDetailsActivity extends Activity {
     private LinearLayout llAccount, llDiseases;
     private ListView listview;
     private RadioGroup fylo;
-    private Button btBack, btOk;
+    private Button btOk;
     private ImageButton btAdd;
     private RadioButton rb_male, rb_female;
     private String Sfylo = "";
@@ -138,7 +138,6 @@ public class UserDetailsActivity extends Activity {
         fylo = (RadioGroup) findViewById(R.id.fylo);
         sDoctors = (Spinner) findViewById(R.id.spDoctors);
 
-        btBack = (Button) findViewById(R.id.btBack);
         btOk = (Button) findViewById(R.id.btOk);
         btAdd = (ImageButton) findViewById(R.id.ibAddHistory);
 
@@ -290,12 +289,6 @@ public class UserDetailsActivity extends Activity {
         });
 
 
-        btBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         btOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -487,12 +480,4 @@ public class UserDetailsActivity extends Activity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finish();
-
-        if (PreferenceManager.getDefaultSharedPreferences(UserDetailsActivity.this).getBoolean("key_animations", false))
-            overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
-    }
 }

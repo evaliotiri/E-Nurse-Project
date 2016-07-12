@@ -92,7 +92,6 @@ public class DrugsActivity extends FragmentActivity {
 //        etCause=(EditText) findViewById(R.id.etCause);
         textView = (AutoCompleteTextView) findViewById(R.id.etCause);
         spinner = (Spinner) findViewById(R.id.spChooseEx);
-        bBack = (Button) findViewById(R.id.btBack);
         bOk = (Button) findViewById(R.id.btOk);
 
 
@@ -135,12 +134,6 @@ public class DrugsActivity extends FragmentActivity {
             }
         });
 
-        bBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override

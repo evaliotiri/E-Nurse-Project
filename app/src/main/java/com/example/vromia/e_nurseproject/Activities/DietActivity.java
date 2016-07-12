@@ -30,7 +30,6 @@ public class DietActivity extends FragmentActivity {
 
     private ImageButton bHour;
     private ImageButton bDate;
-    private Button bBack;
     private Button bOk;
     private EditText quantField;
     private Spinner spinner;
@@ -95,7 +94,6 @@ public class DietActivity extends FragmentActivity {
     public void initUI() {
         bHour = (ImageButton) findViewById(R.id.imbtHour);
         bDate = (ImageButton) findViewById(R.id.imbtDate);
-        bBack = (Button) findViewById(R.id.btBack);
         bOk = (Button) findViewById(R.id.btOk);
         quantField = (EditText) findViewById(R.id.etQuant);
         spinner = (Spinner) findViewById(R.id.spChooseFood);
@@ -117,12 +115,6 @@ public class DietActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 cdate.show(getSupportFragmentManager(), "Calendar Dialog");
-            }
-        });
-        bBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
         bOk.setOnClickListener(new View.OnClickListener() {

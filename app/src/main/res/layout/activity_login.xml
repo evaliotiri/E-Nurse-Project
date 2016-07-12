@@ -16,7 +16,6 @@
         android:text="Είσοδος"
         android:textColor="#de000000"
         android:textSize="25sp"
-        android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="10dp"
         />
@@ -112,7 +111,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="#e51616"
+            android:background="@color/Aquamarine"
             android:text="Δημιουργία Λογαριασμού"
             />
 
@@ -122,7 +121,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@color/YellowGreen"
+            android:background="@color/SkyBlue"
             android:text="Σύνδεση" />
 
     </LinearLayout>

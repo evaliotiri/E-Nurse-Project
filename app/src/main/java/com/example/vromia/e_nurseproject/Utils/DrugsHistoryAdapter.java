@@ -27,6 +27,7 @@ public class DrugsHistoryAdapter extends CursorAdapter {
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
 
+
         View view = null;
         view = inflater.inflate(R.layout.drugs_history_list_item, parent, false);
 

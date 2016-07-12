@@ -1,7 +1,6 @@
 package com.example.vromia.e_nurseproject.Activities;
 
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -48,7 +47,6 @@ public class WorkoutActivity extends FragmentActivity {
         initUI();
         initListeners();
         bMorn.setActivated(true);
-
         String categories[] = getResources().getStringArray(R.array.workoutNames);
         ArrayList<String> finalCategories = new ArrayList<>();
         for (int i = 0; i < categories.length; i++) {
@@ -84,7 +82,6 @@ public class WorkoutActivity extends FragmentActivity {
         bDate = (ImageButton) findViewById(R.id.imbtDate);
         quantField = (EditText) findViewById(R.id.etDuration);
         spinner = (Spinner) findViewById(R.id.spChooseEx);
-        bBack = (Button) findViewById(R.id.btBack);
         bOk = (Button) findViewById(R.id.btOk);
 
 
@@ -122,12 +119,6 @@ public class WorkoutActivity extends FragmentActivity {
             }
         });
 
-        bBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,13 +161,6 @@ public class WorkoutActivity extends FragmentActivity {
         }
     };
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finish();
 
-        if (PreferenceManager.getDefaultSharedPreferences(WorkoutActivity.this).getBoolean("key_animations", false))
-            overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
-    }
 
 }
